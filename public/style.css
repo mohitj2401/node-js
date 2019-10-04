@@ -1,15 +1,11 @@
 .test{
-	/*background-color: red;*/
-	/*margin: 50vh;*/
-	/*display: block;*/
-	/*margin-top: 50vh;*/
 	border:solid  2px black;
-	/*line-height: 5px;*/
 	height: 200px;
 	width: 200px;
 	margin:auto; 
 	text-align: center;
 	box-shadow: 10px 10px 8px 10px #888888;
+	background-color: blue;
 }
 input{
 	margin:auto;
