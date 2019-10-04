@@ -1,7 +1,8 @@
 const express=require("express");
+const popup=require("popups");
 const bodyParser=require("body-parser");
 const request=require("request");
-const alert=require("alert-node");
+// const alert=require("alert-node");
 const app=express();
 const port = process.env.PORT||3000;
 app.use(express.static("public"));
@@ -34,7 +35,10 @@ app.post("/",function(req,res){
 		console.log(price);
 		if(amount==0){
 			console.log("null");
-			alert("error");
+			// window.alert("error");
+			popup.alert({
+				content:'error'
+			});
 						
 		}
 		else{
