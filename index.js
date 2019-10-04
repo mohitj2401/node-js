@@ -1,3 +1,4 @@
+const alert=require("alert-node");
 const express=require("express");
 const bodyParser=require("body-parser");
 const request=require("request");
@@ -29,8 +30,20 @@ app.post("/",function(req,res){
 	request(option,function(error,response,body){
 		var data=JSON.parse(body);
 		var price=data.price;
+		var currentdate=data.time;
 		console.log(price);
-		res.send("<h1>The Current price "+price+"USD</h1>");
+		if(amount==0){
+			console.log("null");
+			alert("error");
+						
+		}
+		else{
+			res.write("<p>The Current date is "+ currentdate +"</p>")
+			res.write("<h1>"+amount+crypto+" is currently "+price+fait+"</h1>");
+		}
+	
+		
+		res.send();
 	});
 });
 app.get("/calculater",function(req,res){
