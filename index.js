@@ -1,7 +1,7 @@
-// const alert=require("alert-node");
 const express=require("express");
 const bodyParser=require("body-parser");
 const request=require("request");
+const alert=require("alert-node");
 const app=express();
 const port = process.env.PORT||3000;
 app.use(express.static("public"));
