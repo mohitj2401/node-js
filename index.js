@@ -1,5 +1,5 @@
 const express=require("express");
-const popup=require("popups");
+// const popup=require("popups");
 const bodyParser=require("body-parser");
 const request=require("request");
 // const alert=require("alert-node");
@@ -36,9 +36,7 @@ app.post("/",function(req,res){
 		if(amount==0){
 			console.log("null");
 			// window.alert("error");
-			popup.alert({
-				content:'error'
-			});
+			res.write("ERRRRRRRRRRRRRRRRRRRRRRRRRRr");
 						
 		}
 		else{
