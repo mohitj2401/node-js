@@ -32,17 +32,15 @@ app.post("/",function(req,res){
 		var price=data.price;
 		var currentdate=data.time;
 		console.log(price);
-		// if(amount==0){
-		// 	console.log("null");
-		// 	alert("error");
+		if(amount==0){
+			console.log("null");
+			alert("error");
 						
-		// }
-		// else{
-		// 	res.write("<p>The Current date is "+ currentdate +"</p>")
-		// 	res.write("<h1>"+amount+crypto+" is currently "+price+fait+"</h1>");
-		// }
-		res.write("<p>The Current date is "+ currentdate +"</p>")
-		res.write("<h1>"+amount+crypto+" is currently "+price+fait+"</h1>");
+		}
+		else{
+			res.write("<p>The Current date is "+ currentdate +"</p>")
+			res.write("<h1>"+amount+crypto+" is currently "+price+fait+"</h1>");
+		}
 		
 		res.send();
 	});
